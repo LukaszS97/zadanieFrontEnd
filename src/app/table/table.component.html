@@ -1,0 +1,36 @@
+<div>
+  <mat-table [dataSource]="personList" matSort>
+    <!--<ng-container *ngFor="let one of columnsName" matColumnDef={{one}}>
+      <mat-header-cell *matHeaderCellDef mat-sort-header>{{one}}</mat-header-cell>
+      <mat-cell *matCellDef="let personList">{{personList}}</mat-cell>
+    </ng-container>-->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell>
+      <mat-cell *matCellDef="let personList">{{personList.id}}</mat-cell>
+    </ng-container>
+      <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Imię i nazwisko</mat-header-cell>
+      <mat-cell *matCellDef="let personList">{{personList.name}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="username">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Nazwa użytkownika</mat-header-cell>
+      <mat-cell *matCellDef="let personList">{{personList.username}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Email</mat-header-cell>
+      <mat-cell *matCellDef="let personList">{{personList.email}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="phone">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Telefon</mat-header-cell>
+      <mat-cell *matCellDef="let personList">{{personList.phone}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="website">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Strona internetowa</mat-header-cell>
+      <mat-cell *matCellDef="let personList">{{personList.website}}</mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="columnsName" color="primary"></mat-header-row>
+    <mat-row *matRowDef="let row; columns:columnsName"></mat-row>
+    </mat-table>
+</div>
+
+<app-edit-data [people]="personList"></app-edit-data>

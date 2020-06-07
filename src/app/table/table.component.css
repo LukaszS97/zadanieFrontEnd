@@ -1,0 +1,24 @@
+table{
+  border-collapse: collapse;
+}
+.tr {
+  background: rgb(241, 236, 236);
+}
+td {
+  width:150px;
+  text-align: center;
+}
+.trMain {
+  background: #2196F3;
+  color: white;
+  cursor: pointer;
+}
+.noTask {
+  text-align: center;
+}
+.komunikat{
+  text-align: center;
+}
+.sorter-false {
+  cursor: default;
+}

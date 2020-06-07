@@ -1,0 +1,40 @@
+<div *ngIf="editOff === false">
+  <h3 class="button">Formularz do edycji danych: <button (click)="showHide()">{{button}}</button></h3>
+  <form *ngIf="hideShow === true">
+    <table style="margin: auto;">
+      <tbody>
+        <tr>
+          <td>Podaj ID danych, które chcesz edytować</td>
+          <td><input [(ngModel)]="editedData.id" type="text" name="id"></td>
+        </tr>
+        <tr>
+          <td>Imię i nazwisko</td>
+          <td><input [(ngModel)]="editedData.name" type="text" name="namw"></td>
+        </tr>
+        <tr>
+          <td>Nazwa użytkownika</td>
+          <td><input [(ngModel)]="editedData.username" type="text" name="username"></td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td><input [(ngModel)]="editedData.email" type="text" name="email"></td>
+        </tr>
+        <tr>
+        <tr>
+          <td>Telefon</td>
+          <td><input [(ngModel)]="editedData.phone" type="text" name="tel"></td>
+        </tr>
+        <tr>
+          <td>Strona Internetowa</td>
+          <td><input [(ngModel)]="editedData.website" type="text" name="strona"></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="button"><button (click)="editData()">Zatwierdź</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</div>
+<div *ngIf="editOff === true">
+  <h3>Możliwość edycji danych jest tymczasowo wyłączona.</h3>
+</div>

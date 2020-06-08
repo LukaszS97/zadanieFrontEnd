@@ -24,4 +24,10 @@ export class TableComponent implements OnInit {
     });
   }
 
+  refreshTable() {
+    console.log(this.personList);
+    let people = this.personList.filteredData;
+    this.personList = new MatTableDataSource(people);
+    this.personList.sort = this.sort;
+  }
 }

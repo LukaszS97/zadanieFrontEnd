@@ -13,7 +13,7 @@ export class EditDataComponent implements OnInit {
   button = 'Pokaż';
   editOff = false; // pozwala/blokuje możliwość edycji danych
   @Input()
-  people: { filteredData: Person[]; };
+  people;
 
   constructor() { }
 

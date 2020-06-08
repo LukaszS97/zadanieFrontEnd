@@ -32,5 +32,6 @@
     <mat-row *matRowDef="let row; columns:columnsName"></mat-row>
     </mat-table>
 </div>
+<button (click)="refreshTable()">Odświerz tabelę</button>
 
 <app-edit-data [people]="personList"></app-edit-data>

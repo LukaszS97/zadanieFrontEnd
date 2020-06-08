@@ -21,7 +21,12 @@ export class EditDataComponent implements OnInit {
   }
 
   editData() {
-    this.people.filteredData[this.editedData.id - 1] = this.editedData;
+    this.people.filteredData[this.editedData.id - 1].id = this.editedData.id;
+    this.people.filteredData[this.editedData.id - 1].name = this.editedData.name;
+    this.people.filteredData[this.editedData.id - 1].username = this.editedData.username;
+    this.people.filteredData[this.editedData.id - 1].email = this.editedData.email;
+    this.people.filteredData[this.editedData.id - 1].phone = this.editedData.phone;
+    this.people.filteredData[this.editedData.id - 1].website = this.editedData.website;
     delete this.editedData;
     this.editedData = new Person();
     console.log(this.people.filteredData);

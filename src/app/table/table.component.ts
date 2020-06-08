@@ -14,7 +14,7 @@ export class TableComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
 
   personList;
-  columnsName = ['id', 'name', 'username', 'email', 'phone', 'website'];
+  columnsName = ['id', 'name', 'username', 'email', 'phone', 'website']; // aby usunąć kolumnę w widoku, należy usunąć rekord tablicy
   constructor(private httpService: HttpService) { }
 
   ngOnInit() {
@@ -22,12 +22,5 @@ export class TableComponent implements OnInit {
       this.personList = new MatTableDataSource(people);
       this.personList.sort = this.sort;
     });
-  }
-
-  refreshTable() {
-    console.log(this.personList);
-    let people = this.personList.filteredData;
-    this.personList = new MatTableDataSource(people);
-    this.personList.sort = this.sort;
   }
 }
